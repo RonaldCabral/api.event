@@ -46,7 +46,7 @@ export class AuthController {
         ...signUpDto,
         createdAt: new Date(),
         updatedAt: new Date(),
-        isItAdmin: false,
+        isItAdmin: true,
       };
       return await this.authService.signUp(payload);
     } catch (error) {

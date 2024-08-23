@@ -34,4 +34,18 @@ export class EventsService {
     const event = await this.findOneEvent(id);
     return this.eventRepository.remove(event);
   }
+
+  async handleImageUpload(file: Express.Multer.File) {
+    const event = new EventEntity();
+    event.image = file.buffer;
+
+    return this.eventRepository.save(event);
+  }
+
+  async handlePdfUpload(file: Express.Multer.File) {
+    const event = new EventEntity();
+    event.agenda = file.buffer;
+
+    return this.eventRepository.save(event);
+  }
 }

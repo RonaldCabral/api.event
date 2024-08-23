@@ -21,25 +21,25 @@ export class UserEntity {
   lastName: string;
 
   @Column()
-  company?: string;
-
+  email: string;
+  
   @Column()
   phoneNumber: string;
 
   @Column()
-  department?: string;
-
-  @Column()
   position?: string;
 
-  @Column({ default: false })
-  isItAdmin: boolean;
+  @Column()
+  company?: string;
 
   @Column()
-  email: string;
-
+  company_address?: string;
+  
   @Column()
   password: string;
+
+  @Column({ default: true })
+  isItAdmin: boolean;
 
   @CreateDateColumn()
   createdAt: Date;

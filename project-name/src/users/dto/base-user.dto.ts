@@ -9,23 +9,23 @@ export class BaseUserDto {
   lastName: string;
 
   @ApiProperty()
-  company?: string;
+  email: string;
 
   @ApiProperty()
   phoneNumber: string;
 
   @ApiProperty()
-  department?: string;
-
-  @ApiProperty()
   position?: string;
 
   @ApiProperty()
-  isItAdmin: boolean;
+  company?: string;
 
   @ApiProperty()
-  email: string;
+  company_address?: string;
 
   @ApiProperty()
   password: string;
+
+  @ApiProperty()
+  isItAdmin: boolean;
 }

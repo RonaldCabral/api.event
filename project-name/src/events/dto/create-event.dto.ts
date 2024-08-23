@@ -8,17 +8,26 @@ export class CreateEventDto {
     description: string;
 
     @ApiProperty()
+    date?: Date;
+
+    @ApiProperty()
+    start_time?: string;
+
+    @ApiProperty()
+    image: Buffer;
+
+    @ApiProperty()
+    agenda?: Buffer;
+
+    @ApiProperty()
     location: string;
 
     @ApiProperty()
-    date: Date;
+    modality: string;
 
     @ApiProperty()
-    start_time: string;
+    isPaid: boolean;
 
     @ApiProperty()
-    end_time: string;
-
-    @ApiProperty()
-    organizer_name: string;
+    isActive: boolean;
 }
